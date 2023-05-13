@@ -17,7 +17,6 @@ const Login = () => {
 		signIn(email, password)
 			.then((res) => {
 				const user = res.user;
-				console.log(user);
 			})
 			.catch((err) => console.log(err.message));
 	};

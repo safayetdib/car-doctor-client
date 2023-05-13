@@ -36,6 +36,14 @@ const Navbar = () => {
 						</li>
 					))}
 
+					{user && (
+						<li>
+							<Link className="my-auto mr-4 underline" to="/bookings">
+								My Bookings
+							</Link>
+						</li>
+					)}
+
 					<li>
 						{user ? (
 							<div className="avatar border">
@@ -114,6 +122,14 @@ const Navbar = () => {
 								<Link to="/login">Login</Link>
 							)}
 						</li>
+
+						{user && (
+							<li>
+								<Link className="btn-outline btn mt-4" to="/bookings">
+									My Bookings
+								</Link>
+							</li>
+						)}
 
 						<li className="mt-4">
 							<a className="btn-outline btn-accent btn rounded px-6 text-base font-semibold capitalize">

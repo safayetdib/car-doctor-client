@@ -1,7 +1,8 @@
 import { FaArrowRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const ServiceCard = ({ service }) => {
-	const { title, price, img } = service;
+	const { _id, title, price, img } = service;
 	return (
 		<div className="card w-full rounded-lg border bg-base-100 p-4 shadow-xl">
 			<figure>
@@ -15,9 +16,12 @@ const ServiceCard = ({ service }) => {
 				<h2 className="card-title font-bold text-gray-800">{title}</h2>
 				<div className="card-actions items-center justify-end">
 					<p className="text-lg font-bold text-accent">Price: ${price}</p>
-					<button className="btn-ghost btn text-xl text-accent">
-						<FaArrowRight />
-					</button>
+					<Link
+						to={`/book/${_id}`}
+						className="btn-ghost btn text-base font-bold capitalize text-accent">
+						Book Now
+						<FaArrowRight className="ml-2" />
+					</Link>
 				</div>
 			</div>
 		</div>
